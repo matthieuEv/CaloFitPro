@@ -10,7 +10,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 17
@@ -24,6 +25,8 @@ jobs:
       run: ./gradlew build
     - name: Build APK
       run: ./gradlew assembleRelease
+    - name: List files in app/build/outputs/apk/release/
+      run: ls -R app/build/outputs/apk/release/
     - name: Upload APK
       uses: actions/upload-artifact@v2
       with:
