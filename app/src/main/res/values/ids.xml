@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="radiobutton_meter" type="id"/>
+    <item name="radiogroup_height_unit" type="id"/>
+    <item name="radiobutton_centimeter" type="id"/>
+</resources>

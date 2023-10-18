@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:fontFamily="@font/poppins"
+        android:background="@color/beige">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/second_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="50dp">
+
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical" app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="10dp" tools:layout_editor_absoluteX="50dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/genre"
+                            android:textSize="16sp"/>
+
+                    <Spinner
+                            android:id="@+id/spinner_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"/>
+                </LinearLayout>
+
+
+                <View android:layout_width="match_parent" android:layout_height="30dp"/>
+
+                <EditText
+                        android:id="@+id/edittext_date_of_birth"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="@string/date_de_naissance"
+                        android:inputType="date"
+                        android:background="@drawable/rounded_search" android:autofillHints=""/>
+
+                <View android:layout_width="match_parent" android:layout_height="30dp"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_search"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                        <EditText
+                                android:id="@+id/edittext_weight"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:hint="@string/poids"
+                                android:inputType="numberDecimal"
+                                android:autofillHints=""
+                                android:background="@android:color/transparent" tools:ignore="NestedWeights"/>
+
+                        <TextView
+                                android:id="@+id/textview_weight_unit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/kg"
+                                android:textSize="16sp"/>
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"/>
+
+                    <EditText
+                            android:id="@+id/edittext_height"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:hint="@string/taille"
+                            android:inputType="numberDecimal"
+                            android:autofillHints=""
+                            android:background="@drawable/rounded_search"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"/>
+                    <View android:layout_width="50dp" android:layout_height="1dp"/>
+
+                    <RadioGroup
+                            android:id="@+id/radiogroup_height_unit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                        <RadioButton
+                                android:id="@+id/radiobutton_meter"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="48dp"
+                                android:text="@string/m"/>
+
+                        <RadioButton
+                                android:id="@+id/radiobutton_centimeter"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="48dp"
+                                android:text="@string/cm"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+
+                <View android:layout_width="match_parent" android:layout_height="30dp"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/activit_physique"
+                            android:textSize="16sp"/>
+
+                    <Spinner
+                            android:id="@+id/spinner_physical_activity_level"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"/>
+                </LinearLayout>
+
+
+                <View android:layout_width="match_parent" android:layout_height="30dp"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox_display_raw_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="@string/affichage"/>
+
+                <TextView
+                        android:id="@+id/textview_calorie_result"
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:padding="15dp"
+                        android:text="@string/calorie_result"
+                        android:background="@drawable/calorie_result"/>
+
+
+                <View android:layout_width="match_parent" android:layout_height="30dp"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="bottom">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/button_calculate_calories"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/calculer"
+                            android:background="@drawable/rounded_button"
+                            android:textColor="@color/beige"/>
+
+                    <View
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/button_reset_all_fields"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="@string/raz"
+                            android:background="@drawable/rounded_button"
+                            android:textColor="@color/beige"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

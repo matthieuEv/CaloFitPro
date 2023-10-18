@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CaloFitPro" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/dark_blue</item>
+        <item name="colorPrimaryVariant">@color/dark_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/orange</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSurface">@color/beige</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorError">@color/orange</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="textFillColor">@color/blue</item>
+        <item name="android:textColorPrimary">@color/dark_blue</item>
+    </style>
+
+    <style name="Theme.CaloFitPro" parent="Base.Theme.CaloFitPro"/>
+</resources>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">CaloFitPro</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="name">Name</string>
+    <string name="utilisateur">Utilisateur</string>
+    <string name="calculer">Calculer</string>
+    <string name="calendar">calendar</string>
+    <string name="mail">mail</string>
+    <string name="raz">RAZ</string>
+    <string name="affichage">Affichage</string>
+    <string name="cm">cm</string>
+    <string name="m">m</string>
+    <string name="taille">Taille</string>
+    <string name="poids">Poids</string>
+    <string name="date_de_naissance">Date de naissance</string>
+    <string name="kg">kg</string>
+    <string name="activit_physique">Activité Physique:</string>
+    <string name="genre">Genre:</string>
+    <string name="calorie_result_idle">
+        <![CDATA[Vous devez cliquer sur le bouton ‘Calculer’ pour obtenir un résultat]]></string>
+    <string name="calorie_result"><![CDATA[Votre dépense de calories journalière est de]]></string>
+    <string name="voir_mon_graphique">Voir mon graphique</string>
+    <string name="supprimer_le_dernier">Supprimer le dernier</string>
+</resources>
