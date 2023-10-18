@@ -30,6 +30,29 @@ jobs:
       with:
         name: app
         path: app/build/outputs/apk/release/app-release-unsigned.apk
+    - name: Extract version
+      id: extract_version
+      run: |
+        VERSION=$(git describe --tags --abbrev=0)
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
+    
+    - name: Increment version
+      id: increment_version
+      run: |
+        IFS='.' read -ra VERSION_PARTS <<< "$VERSION"
+        MAJOR=${VERSION_PARTS[0]}
+        MINOR=${VERSION_PARTS[1]}
+        PATCH=${VERSION_PARTS[2]}
+        NEW_VERSION="$MAJOR.$MINOR.$((PATCH + 1))"
+        echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_ENV
+    
+    - name: Create new tag
+      run: |
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+        git tag $NEW_VERSION
+        git push origin $NEW_VERSION
+
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
