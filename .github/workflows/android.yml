@@ -42,7 +42,7 @@ jobs:
       - name: Ls
         run: |
           ls -la app/build/outputs/apk/debug
-          echo "ok"
+          echo "ok !"
 
       - name: Upload APK
         if: steps.tag-creation.outputs.makeRelease
