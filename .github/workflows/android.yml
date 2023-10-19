@@ -9,9 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Tag Creation
-        uses: matthieuEv/Github-Action-Tag@1
+        uses: matthieuEv/Github-Action-Tag@v1
       - name: Build
         if: steps.github-script.outputs.makeRelease
         run: echo "Add your build commands here"
