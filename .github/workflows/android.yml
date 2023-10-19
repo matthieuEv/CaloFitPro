@@ -13,7 +13,7 @@ jobs:
       contents: write
     steps:
       - name: Tag Creation
-        uses: matthieuEv/Github-Action-Tag@v1.0
+        uses: matthieuEv/Github-Action-Tag@v1
       - name: Build
         if: steps.github-script.outputs.makeRelease
         run: echo "Add your build commands here"
