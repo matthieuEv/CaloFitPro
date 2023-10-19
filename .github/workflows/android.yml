@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -14,8 +14,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Tag Creation
         uses: matthieuEv/Github-Action-Tag@v1
+
+
       - name: Build
         if: steps.github-script.outputs.makeRelease
         run: echo "Add your build commands here"
