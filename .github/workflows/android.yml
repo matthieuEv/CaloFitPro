@@ -17,9 +17,10 @@ jobs:
 
       - name: Tag Creation
         uses: matthieuEv/Github-Action-Tag@v1
+        id: tag-creation
 
 
       - name: Build
-        if: steps.github-script.outputs.makeRelease
+        if: steps.tag-creation.outputs.makeRelease
         run: echo "Add your build commands here"
       
