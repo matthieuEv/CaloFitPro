@@ -22,5 +22,5 @@ jobs:
 
       - name: Build
         if: steps.tag-creation.outputs.makeRelease
-        run: echo "Add your build commands here"
+        run: echo "Add your build commands here..."
       
