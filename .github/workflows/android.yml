@@ -38,6 +38,10 @@ jobs:
         if: steps.tag-creation.outputs.makeRelease
         run: ./gradlew assembleRelease
 
+
+      - name: Ls
+        run: ls -la app/build/outputs/apk
+
       - name: Upload APK
         if: steps.tag-creation.outputs.makeRelease
         uses: actions/upload-artifact@v2
