@@ -41,9 +41,9 @@ jobs:
 
       - name: Ls
         run: |
-          ls -la app/build/outputs/apk
+          ls -la app/build/outputs/apk/debug
           echo "ok"
-          
+
       - name: Upload APK
         if: steps.tag-creation.outputs.makeRelease
         uses: actions/upload-artifact@v2
