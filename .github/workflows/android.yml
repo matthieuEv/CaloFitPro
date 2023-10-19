@@ -12,6 +12,8 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Tag Creation
         uses: matthieuEv/Github-Action-Tag@v1
       - name: Build
