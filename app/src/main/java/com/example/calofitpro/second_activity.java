@@ -305,7 +305,7 @@ public class second_activity extends AppCompatActivity {
             Toast.makeText(second_activity.this, "Veuillez sélectionner un niveau d'activité physique", Toast.LENGTH_SHORT).show();
             return false;
         } else {
-            
+
             return true;
         }
     }
@@ -324,7 +324,7 @@ public class second_activity extends AppCompatActivity {
         return true;
     }
 
-    private String calculateCalories() throws JSONException {
+    private String calculateCaloriesValues() throws JSONException {
         String gender = spinner_gender.getSelectedItem().toString();
         String dob = edittext_date_of_birth.getText().toString();
         double weight = Double.parseDouble(edittext_weight.getText().toString());
@@ -335,7 +335,7 @@ public class second_activity extends AppCompatActivity {
         int birthYear = Integer.parseInt(dob.split("/")[2]);
         int age = currentYear - birthYear;
 
-        double calories = (weight * 10) + (height * 6.25) - (age * 5);
+        calories = (weight * 10) + (height * 6.25) - (age * 5);
 
         switch (gender) {
             case "Homme":
@@ -384,7 +384,7 @@ public class second_activity extends AppCompatActivity {
                 if(checkValues()){
                     String calculatedCalories = null;
                     try {
-                        calculatedCalories = calculateCalories();
+                        calculatedCalories = calculateCaloriesValues();
                     } catch (JSONException e) {
                         throw new RuntimeException(e);
                     }
@@ -426,16 +426,16 @@ public class second_activity extends AppCompatActivity {
 
     private void resetDefaultEditText(EditText editText){
         editText.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
-                    @Override
-                    public void onTextChanged(CharSequence s, int start, int before, int count) {}
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
-                    @Override
-                    public void afterTextChanged(Editable s) {
-                        textview_calorie_result.setText(Html.fromHtml(getString(R.string.calorie_result_idle), Html.FROM_HTML_MODE_LEGACY));
-                    }
-                });
+                @Override
+                public void afterTextChanged(Editable s) {
+                    textview_calorie_result.setText(Html.fromHtml(getString(R.string.calorie_result_idle), Html.FROM_HTML_MODE_LEGACY));
+                }
+            });
     }
 }
