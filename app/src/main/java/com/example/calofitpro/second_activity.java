@@ -61,7 +61,7 @@ public class second_activity extends AppCompatActivity {
 
         Intent intent = getIntent();
         name = intent.getStringExtra("name");
-        Log.d("debug","the name is: "+name);
+        Log.d("debug","the name is: " + name);
 
         spinner_gender = findViewById(R.id.spinner_gender);
         addItemOnSpinnerGender(spinner_gender);
