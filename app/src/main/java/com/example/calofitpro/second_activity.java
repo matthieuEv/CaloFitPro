@@ -305,6 +305,7 @@ public class second_activity extends AppCompatActivity {
             Toast.makeText(second_activity.this, "Veuillez sélectionner un niveau d'activité physique", Toast.LENGTH_SHORT).show();
             return false;
         } else {
+            
             return true;
         }
     }
