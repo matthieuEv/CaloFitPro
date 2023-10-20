@@ -92,7 +92,9 @@ public class second_activity extends AppCompatActivity {
         button_calculate_calories = findViewById(R.id.button_calculate_calories);
         button_calculate_calories.setOnClickListener(calculateCalories(button_calculate_calories));
 
-
+        resetDefaultEditText(edittext_date_of_birth);
+        resetDefaultEditText(edittext_weight);
+        resetDefaultEditText(edittext_height);
     }
 
     @Override
@@ -419,5 +421,20 @@ public class second_activity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void resetDefaultEditText(EditText editText){
+        editText.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+                    @Override
+                    public void afterTextChanged(Editable s) {
+                        textview_calorie_result.setText(Html.fromHtml(getString(R.string.calorie_result_idle), Html.FROM_HTML_MODE_LEGACY));
+                    }
+                });
     }
 }
