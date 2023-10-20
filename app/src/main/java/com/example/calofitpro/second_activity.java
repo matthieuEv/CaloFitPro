@@ -371,6 +371,7 @@ public class second_activity extends AppCompatActivity {
         editor.commit();
 
         saveCalories(calories);
+        
         return String.valueOf(calories);
     }
 
